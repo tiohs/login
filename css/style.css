@@ -1,0 +1,50 @@
+/* Apresentar o login lentamente ^_^! */
+#login {
+    animation-name: fade;
+    animation-duration: 200ms;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*Aparecer lentamente os input */
+form {
+    overflow: hidden;
+    animation: fade 0.2s;
+}
+form .form-group:nth-child(1){
+    animation-name: campos;
+    animation-duration: 0.5s;
+    animation-delay: 210ms;
+    animation-fill-mode: backwards;
+}
+form .form-group:nth-child(2){
+    animation-name: campos;
+    animation-duration: 1s;
+    animation-delay: 410ms;
+    animation-fill-mode: backwards;
+}
+form .btn-block:nth-child(3){
+    animation-name: campos;
+    animation-duration: 2s;
+    animation-delay: 510ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes campos {
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
